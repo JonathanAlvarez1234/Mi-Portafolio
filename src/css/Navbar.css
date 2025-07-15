@@ -10,16 +10,13 @@
     z-index: 999;
 }
 
-/* Logo */
 .logo {
     font-size: 24px;
     font-weight: bold;
     color: #f04e3e;
-    /* Color destacado */
     text-transform: uppercase;
 }
 
-/* Lista de navegación */
 .navbar ul {
     list-style: none;
     display: flex;
@@ -28,7 +25,6 @@
     padding: 0;
 }
 
-/* Items de la lista */
 .navbar li {
     cursor: pointer;
     font-weight: 500;
@@ -36,7 +32,6 @@
     transition: color 0.3s ease;
 }
 
-/* Hover para items */
 .navbar li:hover {
     color: #f04e3e;
 }
