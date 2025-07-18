@@ -1,67 +1,30 @@
 import React from "react";
+import html5 from "../assets/images/html5.png";
+import css3 from "../assets/images/css3.svg";
+import javascript from "../assets/images/javascript.png";
+import reactLogo from "../assets/images/react.png";
+import nodeJSLogo from "../assets/images/nodeJS.png";
+import javaLogo from "../assets/images/java.jpg";
+import mongoDbLogo from "../assets/images/mongo-db.svg";
+import mysqlLogo from "../assets/images/mysql.png";
+import gitLogo from "../assets/images/git.jpg";
+import javafxLogo from "../assets/images/javafx.png";
+import springBootLogo from "../assets/images/springboot.png";
 import "../css/Skills.css";
 
 const skills = [
-    {
-        name: "HTML5",
-        //image: require("../assets/skills/html5.png"),
-        level: 95,
-    },
-    {
-        name: "CSS3",
-        //image: require("../assets/skills/css3.png"),
-        level: 90,
-    },
-    {
-        name: "JavaScript",
-        //image: require("../assets/skills/javascript.png"),
-        level: 85,
-    },
-    {
-        name: "React",
-        //image: require("../assets/skills/react.png"),
-        level: 80,
-    },
-    {
-        name: "Node.js",
-        //image: require("../assets/skills/nodejs.png"),
-        level: 75,
-    },
-    {
-        name: "Python",
-        //image: require("../assets/skills/python.png"),
-        level: 70,
-    },
-    {
-        name: "Java",
-        //image: require("../assets/skills/java.png"),
-        level: 65,
-    },
-    {
-        name: "MongoDB",
-        //image: require("../assets/skills/mongodb.png"),
-        level: 75,
-    },
-    {
-        name: "MySQL",
-        //image: require("../assets/skills/mysql.png"),
-        level: 80,
-    },
-    {
-        name: "Git",
-        //image: require("../assets/skills/git.png"),
-        level: 85,
-    },
-    {
-        name: "Docker",
-        //image: require("../assets/skills/docker.png"),
-        level: 60,
-    },
-    {
-        name: "TypeScript",
-        //image: require("../assets/skills/typescript.png"),
-        level: 70,
-    },
+    { name: "HTML5", image: html5, level: 95 },
+    { name: "CSS3", image: css3, level: 90 },
+    { name: "JavaScript", image: javascript, level: 85 },
+    { name: "React", image: reactLogo, level: 80 },
+    { name: "Node.js", image: nodeJSLogo, level: 95 },
+    //{ name: "Express", image: css3, level: 90 },
+    { name: "Java", image: javaLogo, level: 85 },
+    { name: "MongoDB", image: mongoDbLogo, level: 80 },
+    { name: "MySQL", image: mysqlLogo, level: 95 },
+    { name: "Git", image: gitLogo, level: 90 },
+    { name: "JavaFX", image: javafxLogo, level: 85 },
+    { name: "SpringBoot", image: springBootLogo, level: 80 },
 ];
 
 export default function Skills() {
