@@ -6,12 +6,11 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="logo">MI PORTAFOLIO</div>
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Menu</li>
-        <li>Chefs</li>
-        <li>Features</li>
-        <li>Contact Us</li>
+        <li>Inicio</li>
+        <li>Sobre mi</li>
+        <li>Habilidades</li>
+        <li>Proyectos</li>
+        <li>Contactos</li>
       </ul>
     </nav>
   );

@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Playfair+Display:wght@700&display=swap');
+
+.beams-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.beam-title {
+  color: rgb(130, 207, 201);
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 0 0 10px #ffffff88;
+}
+
+.beam-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.beam-title-main {
+  font-family: 'Pacifico', cursive; /* o 'Playfair Display', serif; */
+  color: #e3e4e4;
+  text-align: center;
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.beam-title-sub {
+  font-family: 'Pacifico', cursive; /* o 'Playfair Display', serif; */
+  color: #025349cc;
+  text-align: center;
+  font-size: 1.5rem;
+  margin: 0;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.beam-title-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.3s ease-out;
+}

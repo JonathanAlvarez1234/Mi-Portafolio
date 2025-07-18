@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+
 .hero {
     display: flex;
     height: 100vh;
@@ -5,8 +7,8 @@
 
 .hero-content {
     flex: 1;
-    background-color: #f04e3e;
-    color: white;
+    background-color: #ada79b;
+    color: rgb(75, 63, 47);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -18,18 +20,15 @@
 }
 
 .hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
+  font-size: 1rem;
+  max-width: 600px;
+  text-align: justify;
+  margin: 0 auto 20px;
+  line-height: 1.6;
+  font-family: 'Open Sans', sans-serif;
 }
 
-.hero-content button {
-    padding: 10px 20px;
-    background: white;
-    color: #f04e3e;
-    border: none;
-    cursor: pointer;
-    font-weight: bold;
-}
+
 
 .hero-image {
     flex: 1;
@@ -40,4 +39,28 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slide {
+  opacity: 0;
+  position: absolute;
+  inset: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide.active {
+  opacity: 1;
 }
