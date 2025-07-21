@@ -1,20 +1,28 @@
 import React from "react";
 import "../css/Projects.css";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import javafxLogo from "../assets/images/javafx.png"
 
 export default function Projects() {
   const projects = [
     {
       title: "Proyecto 1",
-      description: "Descripción breve del proyecto 1.",
-      github: "https://github.com/usuario/proyecto1",
-      image: "https://via.placeholder.com/400x200",
+      description: "Un proyecto en el cual se pueden adoptar mascotas para las personas que necesitan a alguien",
+      github: "https://github.com/JonathanAlvarez1234/AdoptionSystem",
+      image: javafxLogo,
       tech: ["React", "Node.js", "MongoDB"],
     },
   ];
 
   return (
-    <section className="projects-page">
+    <motion.section
+      className="projects-page"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="back-home">
         <Link to="/" className="btn">🏠 Volver a Inicio</Link>
       </div>
@@ -38,6 +46,6 @@ export default function Projects() {
           </div>
         </div>
       ))}
-    </section>
+    </motion.section>
   );
 }
