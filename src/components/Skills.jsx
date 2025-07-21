@@ -13,14 +13,14 @@ import springBootLogo from "../assets/images/springboot.png";
 import "../css/Skills.css";
 
 const skills = [
-    { name: "HTML5", image: html5, level: 95 },
-    { name: "CSS3", image: css3, level: 90 },
+    { name: "HTML5", image: html5, level: 85 },
+    { name: "CSS3", image: css3, level: 50 },
     { name: "JavaScript", image: javascript, level: 85 },
-    { name: "React", image: reactLogo, level: 80 },
-    { name: "Node.js", image: nodeJSLogo, level: 95 },
+    { name: "React", image: reactLogo, level: 90 },
+    { name: "Node.js", image: nodeJSLogo, level: 85 },
     //{ name: "Express", image: css3, level: 90 },
-    { name: "Java", image: javaLogo, level: 85 },
-    { name: "MongoDB", image: mongoDbLogo, level: 80 },
+    { name: "Java", image: javaLogo, level: 95 },
+    { name: "MongoDB", image: mongoDbLogo, level: 95 },
     { name: "MySQL", image: mysqlLogo, level: 95 },
     { name: "Git", image: gitLogo, level: 90 },
     { name: "JavaFX", image: javafxLogo, level: 85 },
@@ -29,7 +29,7 @@ const skills = [
 
 export default function Skills() {
     return (
-        <section className="skills-section">
+        <section className="skills-section" id="skills">
             <h2>Mis Habilidades</h2>
             <div className="skills-grid">
                 {skills.map((skill, index) => (

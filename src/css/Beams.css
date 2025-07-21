@@ -3,7 +3,10 @@
 .beams-container {
   position: relative;
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Ocupa toda la pantalla */
+  display: flex;
+  justify-content: center;  /* Centra horizontal */
+  align-items: center;      /* Centra vertical */
 }
 
 .beam-title {
