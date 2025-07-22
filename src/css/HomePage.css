@@ -4,80 +4,192 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 80vh;
+  min-height: 80vh;
   gap: 40px;
-  background-color: #f7f4ef;
+  background: linear-gradient(135deg, #f7f4ef 0%, #e8dcc6 100%);
   padding: 0 40px;
+  position: relative;
+  overflow: hidden;
 }
 
-.welcome-card {
-  flex: 2; /* 60-70% */
-  background: #fff;
-  padding: 40px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  font-family: 'Open Sans', sans-serif;
-}
-
-.welcome-card h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.welcome-card p {
-  font-size: 1rem;
-  text-align: justify;
-  line-height: 1.6;
-  color: #555;
-}
-
-.profile-card {
-  flex: 1; /* 30-40% */
-  background: #fff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-  text-align: center;
-}
-
-.profile-card img {
-  width: 100%;
-  max-width: 200px;
-  border-radius: 50%;
-  margin-bottom: 20px;
-  object-fit: cover;
-}
-
-.profile-card h2 {
-  font-family: 'Pacifico', cursive;
-  font-size: 1.8rem;
-  margin: 10px 0;
-  color: #333;
-}
-
-.profile-card p {
-  font-size: 1rem;
-  color: #555;
-  margin: 5px 0;
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 25% 25%, rgba(26, 188, 156, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(52, 152, 219, 0.1) 0%, transparent 50%);
+  pointer-events: none;
 }
 
 .content-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  flex: 2; /* mismo tamaño de la welcome-card */
+  flex: 2;
+  position: relative;
+  z-index: 1;
+}
+
+.welcome-card {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 45px;
+  border-radius: 25px;
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.1),
+    0 5px 20px rgba(0, 0, 0, 0.05);
+  font-family: 'Open Sans', sans-serif;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcome-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1abc9c, #3498db, #9b59b6);
+  transform: translateX(-100%);
+  transition: transform 0.8s ease;
+}
+
+.welcome-card:hover::before {
+  transform: translateX(0);
+}
+
+.welcome-card h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2.8rem;
+  margin-bottom: 25px;
+  color: #2c3e50;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  line-height: 1.2;
+}
+
+.welcome-card p {
+  font-size: 1.15rem;
+  text-align: justify;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 15px;
+  opacity: 0.9;
+}
+
+.welcome-card p:last-child {
+  margin-bottom: 0;
+}
+
+.profile-card {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 35px;
+  border-radius: 25px;
+  box-shadow: 
+    0 15px 50px rgba(0, 0, 0, 0.1),
+    0 5px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.profile-card::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle, rgba(26, 188, 156, 0.1) 0%, transparent 70%);
+  transition: all 0.6s ease;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.profile-card:hover::before {
+  width: 300px;
+  height: 300px;
+}
+
+.profile-card img {
+  width: 100%;
+  max-width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+  object-fit: cover;
+  border: 4px solid rgba(26, 188, 156, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+}
+
+.profile-card img:hover {
+  border-color: #1abc9c;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.profile-card h2 {
+  font-family: 'Pacifico', cursive;
+  font-size: 2rem;
+  margin: 15px 0;
+  color: #2c3e50;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-card p {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 8px 0;
+  position: relative;
+  z-index: 2;
+  font-weight: 500;
 }
 
 .actions-card {
-  background: #fff;
-  padding: 20px 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  padding: 25px 35px;
+  border-radius: 20px;
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.1),
+    0 5px 15px rgba(0, 0, 0, 0.05);
   display: flex;
   gap: 20px;
   justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.actions-card::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #333, #1abc9c);
+  transform: translateX(-100%);
+  transition: transform 0.6s ease;
+}
+
+.actions-card:hover::before {
+  transform: translateX(0);
 }
 
 .github-btn,
@@ -85,23 +197,113 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: #333;
   color: #fff;
   text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  font-weight: bold;
-  transition: background 0.3s ease;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.github-btn {
+  background: linear-gradient(135deg, #333 0%, #24292e 100%);
+  box-shadow: 0 6px 20px rgba(51, 51, 51, 0.3);
+}
+
+.github-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
 
 .github-btn:hover {
-  background: #24292e;
+  background: linear-gradient(135deg, #24292e 0%, #1a1e22 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(51, 51, 51, 0.4);
+}
+
+.github-btn:hover::before {
+  left: 100%;
 }
 
 .cv-btn {
-  background: #1abc9c;
+  background: linear-gradient(135deg, #1abc9c 0%, #16a085 100%);
+  box-shadow: 0 6px 20px rgba(26, 188, 156, 0.3);
+}
+
+.cv-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
 
 .cv-btn:hover {
-  background: #16a085;
+  background: linear-gradient(135deg, #16a085 0%, #1abc9c 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(26, 188, 156, 0.4);
+}
+
+.cv-btn:hover::before {
+  left: 100%;
+}
+
+.github-btn:active,
+.cv-btn:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+  
+  .welcome-card {
+    padding: 30px;
+  }
+  
+  .welcome-card h1 {
+    font-size: 2.2rem;
+  }
+  
+  .welcome-card p {
+    font-size: 1rem;
+  }
+  
+  .profile-card {
+    padding: 25px;
+  }
+  
+  .profile-card h2 {
+    font-size: 1.6rem;
+  }
+  
+  .actions-card {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .github-btn,
+  .cv-btn {
+    width: 100%;
+    justify-content: center;
+    max-width: 200px;
+  }
 }

@@ -265,7 +265,7 @@ const Beams = ({
                     style={{ opacity, transition: "opacity 0.3s ease-out" }}
                 >
                     <h1 className="beam-title-main">Bienvenidos a mi portafolio</h1>
-                    <h2 className="beam-title-sub">por Jonathan Alvarez</h2>
+                    <h2 className="beam-title-sub">Código con propósito, valores en cada línea</h2>
                 </div>
             </Html>
         </CanvasWrapper>
